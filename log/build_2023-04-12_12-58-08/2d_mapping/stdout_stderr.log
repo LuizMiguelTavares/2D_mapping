@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/2d_mapping/2d_mapping.egg-info
+writing ../../build/2d_mapping/2d_mapping.egg-info/PKG-INFO
+writing dependency_links to ../../build/2d_mapping/2d_mapping.egg-info/dependency_links.txt
+writing entry points to ../../build/2d_mapping/2d_mapping.egg-info/entry_points.txt
+writing requirements to ../../build/2d_mapping/2d_mapping.egg-info/requires.txt
+writing top-level names to ../../build/2d_mapping/2d_mapping.egg-info/top_level.txt
+writing manifest file '../../build/2d_mapping/2d_mapping.egg-info/SOURCES.txt'
+reading manifest file '../../build/2d_mapping/2d_mapping.egg-info/SOURCES.txt'
+writing manifest file '../../build/2d_mapping/2d_mapping.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/miguel/2D_mapping/build/2d_mapping/build
+creating /home/miguel/2D_mapping/build/2d_mapping/build/lib
+creating /home/miguel/2D_mapping/build/2d_mapping/build/lib/2d_mapping
+copying 2d_mapping/__init__.py -> /home/miguel/2D_mapping/build/2d_mapping/build/lib/2d_mapping
+running install
+running install_lib
+creating /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping
+copying /home/miguel/2D_mapping/build/2d_mapping/build/lib/2d_mapping/__init__.py -> /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping
+byte-compiling /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/miguel/2D_mapping/install/2d_mapping/share/ament_index
+creating /home/miguel/2D_mapping/install/2d_mapping/share/ament_index/resource_index
+creating /home/miguel/2D_mapping/install/2d_mapping/share/ament_index/resource_index/packages
+copying resource/2d_mapping -> /home/miguel/2D_mapping/install/2d_mapping/share/ament_index/resource_index/packages
+copying package.xml -> /home/miguel/2D_mapping/install/2d_mapping/share/2d_mapping
+running install_egg_info
+Copying ../../build/2d_mapping/2d_mapping.egg-info to /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/miguel/2D_mapping/build/2d_mapping/install.log'

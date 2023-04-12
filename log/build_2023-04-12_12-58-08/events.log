@@ -1,0 +1,95 @@
+[0.000000] (-) TimerEvent: {}
+[0.003661] (2d_mapping) JobQueued: {'identifier': '2d_mapping', 'dependencies': OrderedDict()}
+[0.003773] (2d_mapping) JobStarted: {'identifier': '2d_mapping'}
+[0.098090] (-) TimerEvent: {}
+[0.198718] (-) TimerEvent: {}
+[0.299535] (-) TimerEvent: {}
+[0.400207] (-) TimerEvent: {}
+[0.501219] (-) TimerEvent: {}
+[0.602058] (-) TimerEvent: {}
+[0.702973] (-) TimerEvent: {}
+[0.803935] (-) TimerEvent: {}
+[0.904883] (-) TimerEvent: {}
+[1.005820] (-) TimerEvent: {}
+[1.107245] (-) TimerEvent: {}
+[1.208414] (-) TimerEvent: {}
+[1.309248] (-) TimerEvent: {}
+[1.410314] (-) TimerEvent: {}
+[1.510665] (-) TimerEvent: {}
+[1.611047] (-) TimerEvent: {}
+[1.711676] (-) TimerEvent: {}
+[1.812938] (-) TimerEvent: {}
+[1.914205] (-) TimerEvent: {}
+[2.014765] (-) TimerEvent: {}
+[2.115383] (-) TimerEvent: {}
+[2.215838] (-) TimerEvent: {}
+[2.316442] (-) TimerEvent: {}
+[2.417379] (-) TimerEvent: {}
+[2.518094] (-) TimerEvent: {}
+[2.618903] (-) TimerEvent: {}
+[2.719940] (-) TimerEvent: {}
+[2.821097] (-) TimerEvent: {}
+[2.921921] (-) TimerEvent: {}
+[3.022834] (-) TimerEvent: {}
+[3.123389] (-) TimerEvent: {}
+[3.223795] (-) TimerEvent: {}
+[3.324343] (-) TimerEvent: {}
+[3.424920] (-) TimerEvent: {}
+[3.525667] (-) TimerEvent: {}
+[3.626629] (-) TimerEvent: {}
+[3.727719] (-) TimerEvent: {}
+[3.829198] (-) TimerEvent: {}
+[3.844848] (2d_mapping) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/2d_mapping', 'build', '--build-base', '/home/miguel/2D_mapping/build/2d_mapping/build', 'install', '--record', '/home/miguel/2D_mapping/build/2d_mapping/install.log', '--single-version-externally-managed'], 'cwd': '/home/miguel/2D_mapping/src/2d_mapping', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'miguel', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/miguel/robos_autonomos/install/tb3_ra_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/miguel', 'OLDPWD': '/home/miguel/2D_mapping/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1863', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=668579c3074e2b4d5f23ba296436a15d', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/miguel/turtlebot3_ws/install:/home/miguel/robos_autonomos/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'miguel', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'miguel', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/root/anaconda3/bin:/opt/ros/humble/bin:/home/miguel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/miguel-IdeaPad-3-15IML05:@/tmp/.ICE-unix/1863,unix/miguel-IdeaPad-3-15IML05:/tmp/.ICE-unix/1863', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/597eceb9_1172_44a4_9e06_c345e57c4df4', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.101', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/miguel/robos_autonomos/install/tb3_ra_interfaces:/home/miguel/robos_autonomos/install/tb3_ra_bringup:/home/miguel/robos_autonomos/install/tb3_ra2:/home/miguel/robos_autonomos/install/tb3_ra:/home/miguel/turtlebot3_ws/install/turtlebot3_simulations:/home/miguel/turtlebot3_ws/install/turtlebot3_gazebo:/home/miguel/turtlebot3_ws/install/turtlebot3_fake_node:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/miguel/2D_mapping/build/2d_mapping', 'TURTLEBOT3_MODEL': 'waffle', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=668579c3074e2b4d5f23ba296436a15d', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/miguel/2D_mapping/build/2d_mapping/prefix_override:/home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages:/home/miguel/robos_autonomos/install/tb3_ra_interfaces/local/lib/python3.10/dist-packages:/home/miguel/robos_autonomos/build/tb3_ra2:/home/miguel/robos_autonomos/install/tb3_ra2/lib/python3.10/site-packages:/home/miguel/robos_autonomos/build/tb3_ra:/home/miguel/robos_autonomos/install/tb3_ra/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/miguel/robos_autonomos/install/tb3_ra_interfaces:/home/miguel/robos_autonomos/install/tb3_ra_bringup:/home/miguel/turtlebot3_ws/install/turtlebot3_simulations:/home/miguel/turtlebot3_ws/install/turtlebot3_gazebo:/home/miguel/turtlebot3_ws/install/turtlebot3_fake_node'}, 'shell': False}
+[3.929456] (-) TimerEvent: {}
+[4.031117] (-) TimerEvent: {}
+[4.132044] (-) TimerEvent: {}
+[4.233328] (-) TimerEvent: {}
+[4.334002] (-) TimerEvent: {}
+[4.435495] (-) TimerEvent: {}
+[4.536061] (-) TimerEvent: {}
+[4.636572] (-) TimerEvent: {}
+[4.737223] (-) TimerEvent: {}
+[4.838466] (-) TimerEvent: {}
+[4.939073] (-) TimerEvent: {}
+[5.040362] (-) TimerEvent: {}
+[5.141948] (-) TimerEvent: {}
+[5.243548] (-) TimerEvent: {}
+[5.344191] (-) TimerEvent: {}
+[5.403184] (2d_mapping) StdoutLine: {'line': b'running egg_info\n'}
+[5.406853] (2d_mapping) StdoutLine: {'line': b'creating ../../build/2d_mapping/2d_mapping.egg-info\n'}
+[5.408267] (2d_mapping) StdoutLine: {'line': b'writing ../../build/2d_mapping/2d_mapping.egg-info/PKG-INFO\n'}
+[5.409404] (2d_mapping) StdoutLine: {'line': b'writing dependency_links to ../../build/2d_mapping/2d_mapping.egg-info/dependency_links.txt\n'}
+[5.410169] (2d_mapping) StdoutLine: {'line': b'writing entry points to ../../build/2d_mapping/2d_mapping.egg-info/entry_points.txt\n'}
+[5.410773] (2d_mapping) StdoutLine: {'line': b'writing requirements to ../../build/2d_mapping/2d_mapping.egg-info/requires.txt\n'}
+[5.411132] (2d_mapping) StdoutLine: {'line': b'writing top-level names to ../../build/2d_mapping/2d_mapping.egg-info/top_level.txt\n'}
+[5.411462] (2d_mapping) StdoutLine: {'line': b"writing manifest file '../../build/2d_mapping/2d_mapping.egg-info/SOURCES.txt'\n"}
+[5.423881] (2d_mapping) StdoutLine: {'line': b"reading manifest file '../../build/2d_mapping/2d_mapping.egg-info/SOURCES.txt'\n"}
+[5.426498] (2d_mapping) StdoutLine: {'line': b"writing manifest file '../../build/2d_mapping/2d_mapping.egg-info/SOURCES.txt'\n"}
+[5.427794] (2d_mapping) StdoutLine: {'line': b'running build\n'}
+[5.429676] (2d_mapping) StdoutLine: {'line': b'running build_py\n'}
+[5.430392] (2d_mapping) StdoutLine: {'line': b'creating /home/miguel/2D_mapping/build/2d_mapping/build\n'}
+[5.430583] (2d_mapping) StdoutLine: {'line': b'creating /home/miguel/2D_mapping/build/2d_mapping/build/lib\n'}
+[5.430711] (2d_mapping) StdoutLine: {'line': b'creating /home/miguel/2D_mapping/build/2d_mapping/build/lib/2d_mapping\n'}
+[5.430845] (2d_mapping) StdoutLine: {'line': b'copying 2d_mapping/__init__.py -> /home/miguel/2D_mapping/build/2d_mapping/build/lib/2d_mapping\n'}
+[5.430976] (2d_mapping) StdoutLine: {'line': b'running install\n'}
+[5.431240] (2d_mapping) StdoutLine: {'line': b'running install_lib\n'}
+[5.433232] (2d_mapping) StdoutLine: {'line': b'creating /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping\n'}
+[5.434881] (2d_mapping) StdoutLine: {'line': b'copying /home/miguel/2D_mapping/build/2d_mapping/build/lib/2d_mapping/__init__.py -> /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping\n'}
+[5.438210] (2d_mapping) StdoutLine: {'line': b'byte-compiling /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping/__init__.py to __init__.cpython-310.pyc\n'}
+[5.439031] (2d_mapping) StdoutLine: {'line': b'running install_data\n'}
+[5.443999] (2d_mapping) StdoutLine: {'line': b'creating /home/miguel/2D_mapping/install/2d_mapping/share/ament_index\n'}
+[5.445001] (-) TimerEvent: {}
+[5.445380] (2d_mapping) StdoutLine: {'line': b'creating /home/miguel/2D_mapping/install/2d_mapping/share/ament_index/resource_index\n'}
+[5.446303] (2d_mapping) StdoutLine: {'line': b'creating /home/miguel/2D_mapping/install/2d_mapping/share/ament_index/resource_index/packages\n'}
+[5.446847] (2d_mapping) StdoutLine: {'line': b'copying resource/2d_mapping -> /home/miguel/2D_mapping/install/2d_mapping/share/ament_index/resource_index/packages\n'}
+[5.448084] (2d_mapping) StdoutLine: {'line': b'copying package.xml -> /home/miguel/2D_mapping/install/2d_mapping/share/2d_mapping\n'}
+[5.449337] (2d_mapping) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.457747] (2d_mapping) StdoutLine: {'line': b'Copying ../../build/2d_mapping/2d_mapping.egg-info to /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping-0.0.0-py3.10.egg-info\n'}
+[5.462378] (2d_mapping) StdoutLine: {'line': b'running install_scripts\n'}
+[5.545412] (-) TimerEvent: {}
+[5.559638] (2d_mapping) StdoutLine: {'line': b"writing list of installed files to '/home/miguel/2D_mapping/build/2d_mapping/install.log'\n"}
+[5.645809] (-) TimerEvent: {}
+[5.698759] (2d_mapping) CommandEnded: {'returncode': 0}
+[5.746070] (-) TimerEvent: {}
+[5.779457] (2d_mapping) JobEnded: {'identifier': '2d_mapping', 'rc': 0}
+[5.783530] (-) EventReactorShutdown: {}

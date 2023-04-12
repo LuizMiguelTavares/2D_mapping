@@ -1,0 +1,22 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages",
+        "/home/miguel/robos_autonomos/install/tb3_ra_interfaces/local/lib/python3.10/dist-packages",
+        "/home/miguel/robos_autonomos/build/tb3_ra2",
+        "/home/miguel/robos_autonomos/install/tb3_ra2/lib/python3.10/site-packages",
+        "/home/miguel/robos_autonomos/build/tb3_ra",
+        "/home/miguel/robos_autonomos/install/tb3_ra/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages",
+        "/home/miguel/robos_autonomos/install/tb3_ra_interfaces/local/lib/python3.10/dist-packages",
+        "/home/miguel/robos_autonomos/build/tb3_ra2",
+        "/home/miguel/robos_autonomos/install/tb3_ra2/lib/python3.10/site-packages",
+        "/home/miguel/robos_autonomos/build/tb3_ra",
+        "/home/miguel/robos_autonomos/install/tb3_ra/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

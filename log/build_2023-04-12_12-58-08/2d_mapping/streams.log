@@ -1,0 +1,33 @@
+[3.843s] Invoking command in '/home/miguel/2D_mapping/src/2d_mapping': PYTHONPATH=/home/miguel/2D_mapping/build/2d_mapping/prefix_override:/home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/2d_mapping build --build-base /home/miguel/2D_mapping/build/2d_mapping/build install --record /home/miguel/2D_mapping/build/2d_mapping/install.log --single-version-externally-managed
+[5.400s] running egg_info
+[5.404s] creating ../../build/2d_mapping/2d_mapping.egg-info
+[5.405s] writing ../../build/2d_mapping/2d_mapping.egg-info/PKG-INFO
+[5.406s] writing dependency_links to ../../build/2d_mapping/2d_mapping.egg-info/dependency_links.txt
+[5.407s] writing entry points to ../../build/2d_mapping/2d_mapping.egg-info/entry_points.txt
+[5.407s] writing requirements to ../../build/2d_mapping/2d_mapping.egg-info/requires.txt
+[5.408s] writing top-level names to ../../build/2d_mapping/2d_mapping.egg-info/top_level.txt
+[5.408s] writing manifest file '../../build/2d_mapping/2d_mapping.egg-info/SOURCES.txt'
+[5.420s] reading manifest file '../../build/2d_mapping/2d_mapping.egg-info/SOURCES.txt'
+[5.423s] writing manifest file '../../build/2d_mapping/2d_mapping.egg-info/SOURCES.txt'
+[5.425s] running build
+[5.426s] running build_py
+[5.427s] creating /home/miguel/2D_mapping/build/2d_mapping/build
+[5.427s] creating /home/miguel/2D_mapping/build/2d_mapping/build/lib
+[5.427s] creating /home/miguel/2D_mapping/build/2d_mapping/build/lib/2d_mapping
+[5.427s] copying 2d_mapping/__init__.py -> /home/miguel/2D_mapping/build/2d_mapping/build/lib/2d_mapping
+[5.427s] running install
+[5.428s] running install_lib
+[5.431s] creating /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping
+[5.432s] copying /home/miguel/2D_mapping/build/2d_mapping/build/lib/2d_mapping/__init__.py -> /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping
+[5.435s] byte-compiling /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping/__init__.py to __init__.cpython-310.pyc
+[5.436s] running install_data
+[5.441s] creating /home/miguel/2D_mapping/install/2d_mapping/share/ament_index
+[5.442s] creating /home/miguel/2D_mapping/install/2d_mapping/share/ament_index/resource_index
+[5.443s] creating /home/miguel/2D_mapping/install/2d_mapping/share/ament_index/resource_index/packages
+[5.444s] copying resource/2d_mapping -> /home/miguel/2D_mapping/install/2d_mapping/share/ament_index/resource_index/packages
+[5.445s] copying package.xml -> /home/miguel/2D_mapping/install/2d_mapping/share/2d_mapping
+[5.447s] running install_egg_info
+[5.455s] Copying ../../build/2d_mapping/2d_mapping.egg-info to /home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d_mapping-0.0.0-py3.10.egg-info
+[5.459s] running install_scripts
+[5.556s] writing list of installed files to '/home/miguel/2D_mapping/build/2d_mapping/install.log'
+[5.696s] Invoked command in '/home/miguel/2D_mapping/src/2d_mapping' returned '0': PYTHONPATH=/home/miguel/2D_mapping/build/2d_mapping/prefix_override:/home/miguel/2D_mapping/install/2d_mapping/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/2d_mapping build --build-base /home/miguel/2D_mapping/build/2d_mapping/build install --record /home/miguel/2D_mapping/build/2d_mapping/install.log --single-version-externally-managed
