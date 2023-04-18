@@ -112,5 +112,6 @@ $env:COLCON_CURRENT_PREFIX=(Get-Item $PSCommandPath).Directory.Parent.Parent.Ful
 
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/2d_mapping/hook/pythonpath.ps1"
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/2d_mapping/hook/ament_prefix_path.ps1"
+colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\../../build/2d_mapping/share/2d_mapping/hook/pythonpath_develop.ps1"
 
 Remove-Item Env:\COLCON_CURRENT_PREFIX

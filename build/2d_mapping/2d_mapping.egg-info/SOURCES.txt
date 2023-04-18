@@ -9,7 +9,13 @@ setup.py
 ../../build/2d_mapping/2d_mapping.egg-info/top_level.txt
 ../../build/2d_mapping/2d_mapping.egg-info/zip-safe
 2d_mapping/__init__.py
+2d_mapping/control.py
+2d_mapping/mapping.py
+2d_mapping.egg-info/PKG-INFO
+2d_mapping.egg-info/SOURCES.txt
+2d_mapping.egg-info/dependency_links.txt
+2d_mapping.egg-info/entry_points.txt
+2d_mapping.egg-info/requires.txt
+2d_mapping.egg-info/top_level.txt
+2d_mapping.egg-info/zip-safe
 resource/2d_mapping
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

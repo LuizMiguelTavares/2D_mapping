@@ -1,3 +1,4 @@
 [console_scripts]
-
+control = 2d_mapping.control:main
+mapping = 2d_mapping.mapping:main
 
