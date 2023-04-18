@@ -15,9 +15,10 @@ class MapCreator(Node):
         super().__init__("map_creator")
 
         self.teste = True
-        self.laser_const = 1
-        self.frames_sec  = 0.2
-        self.resolution = 0.1
+        self.laser_const     = 1
+        self.frames_sec      = 1
+        self.resolution      = 0.005
+        self.grid_resolution = 0.005
 
         self.pose = None # Inicializando a pose
         self.ranges = None
@@ -40,6 +41,9 @@ class MapCreator(Node):
         self.ranges = msg.ranges
         self.get_logger().info('laser')
 
+    def grid_point(self, n):
+        return round(n/self.grid_resolution)*self.grid_resolution
+
     def polar_to_cartesian_global(self):
 
         x = []
@@ -51,7 +55,9 @@ class MapCreator(Node):
         x_ps = []
         y_ps = []
 
+        
         if self.ranges == None or self.pose == None:
+            self.get_logger().info('Não foi possível identificar a pose e/ou dados do laser do robô')
             return None, None, None, None, None
         
         yaw     = self.yaw
@@ -78,8 +84,8 @@ class MapCreator(Node):
 
                     P  = np.matrix([[const * ranges_laser[i] * math.cos(math.radians(i/self.laser_const))],[const * ranges_laser[i] * math.sin(math.radians(i/self.laser_const))],[1]])
                     
-                    x.append((np.dot(R1, np.dot(R2,P)))[0,0])
-                    y.append((np.dot(R1, np.dot(R2,P)))[1,0])
+                    x.append(self.grid_point((np.dot(R1, np.dot(R2,P)))[0,0]))
+                    y.append(self.grid_point((np.dot(R1, np.dot(R2,P)))[1,0]))
 
                     if const == 1.0:
                         x_ps.append(P[0,0])
@@ -91,8 +97,8 @@ class MapCreator(Node):
                 else:
                     P  = np.matrix([[const * 3.5 * math.cos(math.radians(i/self.laser_const))],[const * 3.5 * math.sin(math.radians(i/self.laser_const))],[1]])
                     
-                    x.append((np.dot(M,P))[0,0])
-                    y.append((np.dot(M,P))[1,0])
+                    x.append(self.grid_point((np.dot(M,P))[0,0]))
+                    y.append(self.grid_point((np.dot(M,P))[1,0]))
 
                     weight.append(int(100))
         
@@ -102,18 +108,17 @@ class MapCreator(Node):
         d = {'x':x, 'y':y, 'w':weight}
 
         if self.teste:
-            self.get_logger().info('teste 1')
             self.dt = pd.DataFrame(data=d)
             self.teste = False
         else:
-            
-            self.get_logger().info('oi')
             dt2 = pd.DataFrame(data=d)
             self.dt = pd.concat([self.dt,dt2], ignore_index=True)
 
         plt.scatter(self.dt['x'], self.dt['y'], s=1, c = self.dt['w'])
         plt.scatter(x_p , y_p, color='green', s=30)
 
+        plt.savefig('myimage.svg', format='svg', dpi=500)
+        
         plt.show()
         self.get_logger().info('yaw = ' + str(round(yaw, 3)) + ', x = ' + str(round(x_p, 2)) + ', y = ' + str(round(y_p, 2)))
         return x, y, weight, degree, ranges
