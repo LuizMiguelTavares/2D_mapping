@@ -21,6 +21,7 @@ class TurtlebotControl(Node):
         self.ang_min_range    = None            # ângulo com o menor range
         self.min_range        = None
         self.rotation         = 90              # ângulo de rotação
+        self.apagar           = 10
         
         # Switch loops
         self.case_cl          = 1               # Case para o "control loop"
