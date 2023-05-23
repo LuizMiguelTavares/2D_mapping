@@ -132,7 +132,7 @@ class MapCreator(Node):
             dt2 = pd.DataFrame(data=d)
             self.dt = pd.concat([self.dt,dt2], ignore_index=True)
 
-        self.dt.to_csv('Pontos_mapa.csv')
+        #self.dt.to_csv('Pontos_mapa.csv')
         plt.scatter(self.dt['x'], self.dt['y'], s=1, c = self.dt['w'])
         plt.scatter(x_p , y_p, color='green', s=30)
 
