@@ -1,0 +1,18 @@
+[2.153s] Invoking command in '/home/luiz/2D_mapping/build/2d_mapping': PYTHONPATH=/home/luiz/2D_mapping/build/2d_mapping/prefix_override:/home/luiz/2D_mapping/install/2d_mapping/lib/python3.10/site-packages: /usr/bin/python3 setup.py develop --editable --build-directory /home/luiz/2D_mapping/build/2d_mapping/build --no-deps install_data
+[2.994s] running develop
+[3.472s] running egg_info
+[3.472s] writing 2d_mapping.egg-info/PKG-INFO
+[3.472s] writing dependency_links to 2d_mapping.egg-info/dependency_links.txt
+[3.473s] writing entry points to 2d_mapping.egg-info/entry_points.txt
+[3.473s] writing requirements to 2d_mapping.egg-info/requires.txt
+[3.473s] writing top-level names to 2d_mapping.egg-info/top_level.txt
+[3.482s] reading manifest file '2d_mapping.egg-info/SOURCES.txt'
+[3.488s] writing manifest file '2d_mapping.egg-info/SOURCES.txt'
+[3.495s] running build_ext
+[3.496s] Creating /home/luiz/2D_mapping/install/2d_mapping/lib/python3.10/site-packages/2d-mapping.egg-link (link to .)
+[3.499s] Installing control script to /home/luiz/2D_mapping/install/2d_mapping/lib/2d_mapping
+[3.499s] Installing mapping script to /home/luiz/2D_mapping/install/2d_mapping/lib/2d_mapping
+[3.500s] 
+[3.500s] Installed /home/luiz/2D_mapping/build/2d_mapping
+[3.500s] running install_data
+[3.612s] Invoked command in '/home/luiz/2D_mapping/build/2d_mapping' returned '0': PYTHONPATH=/home/luiz/2D_mapping/build/2d_mapping/prefix_override:/home/luiz/2D_mapping/install/2d_mapping/lib/python3.10/site-packages: /usr/bin/python3 setup.py develop --editable --build-directory /home/luiz/2D_mapping/build/2d_mapping/build --no-deps install_data

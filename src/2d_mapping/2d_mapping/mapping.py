@@ -7,6 +7,7 @@ import math
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import time
 
 
 class MapCreator(Node):
@@ -16,9 +17,9 @@ class MapCreator(Node):
 
         self.teste = True
         self.laser_const     = 1
-        self.frames_sec      = 1
-        self.resolution      = 0.005
-        self.grid_resolution = 0.005
+        self.frames_sec      = 10
+        self.resolution      = 0.05
+        self.grid_resolution = 0.05
 
         self.pose = None # Inicializando a pose
         self.ranges = None
@@ -34,18 +35,26 @@ class MapCreator(Node):
         self.position = msg.pose.pose.position
         self.orientation = [self.orientation.x, self.orientation.y, self.orientation.z, self.orientation.w]
         (self.roll, self.pitch, self.yaw) = euler_from_quaternion(self.orientation)
-        self.get_logger().info('pose')
+        self.pose_timestamp = self.pose.header.stamp.sec+self.pose.header.stamp.nanosec*10e-9
+
+        #self.pose_timestamp = time.perf_counter()
+
+        #self.get_logger().info(str(self.pose_timestamp))
+        #self.get_logger().info(str(time.perf_counter()))
 
     def laser_reading(self, msg): # OK
         # Sentido anti-horário
         self.ranges = msg.ranges
-        self.get_logger().info('laser')
+        self.laser_timestamp = msg.header.stamp.sec + msg.header.stamp.nanosec*10e-9
+        #self.laser_timestamp = time.perf_counter()
+        #self.get_logger().info(str(self.laser_timestamp))
+        #self.get_logger().info('Laser')
 
     def grid_point(self, n):
         return round(n/self.grid_resolution)*self.grid_resolution
 
     def polar_to_cartesian_global(self):
-
+        
         x = []
         y = []
         weight = []
@@ -58,6 +67,11 @@ class MapCreator(Node):
         
         if self.ranges == None or self.pose == None:
             self.get_logger().info('Não foi possível identificar a pose e/ou dados do laser do robô')
+            return None, None, None, None, None
+
+        #self.get_logger().info(str(abs(self.pose_timestamp - self.laser_timestamp)))
+
+        if abs(self.pose_timestamp - self.laser_timestamp) > 0.01:
             return None, None, None, None, None
         
         yaw     = self.yaw
@@ -103,8 +117,8 @@ class MapCreator(Node):
                     weight.append(int(100))
         
         
-        t = pd.DataFrame(data={'x':x_ps, 'y':y_ps})
-        t.to_csv('teste')
+        #t = pd.DataFrame(data={'x':x_ps, 'y':y_ps})
+        #t.to_csv('teste')
         d = {'x':x, 'y':y, 'w':weight}
 
         if self.teste:
@@ -114,13 +128,14 @@ class MapCreator(Node):
             dt2 = pd.DataFrame(data=d)
             self.dt = pd.concat([self.dt,dt2], ignore_index=True)
 
-        plt.scatter(self.dt['x'], self.dt['y'], s=1, c = self.dt['w'])
-        plt.scatter(x_p , y_p, color='green', s=30)
+        self.dt.to_csv('Pontos_mapa.csv')
+        #plt.scatter(self.dt['x'], self.dt['y'], s=1, c = self.dt['w'])
+        #plt.scatter(x_p , y_p, color='green', s=30)
 
-        plt.savefig('myimage.svg', format='svg', dpi=500)
+        #plt.savefig('myimage.svg', format='svg', dpi=500)
         
-        plt.show()
-        self.get_logger().info('yaw = ' + str(round(yaw, 3)) + ', x = ' + str(round(x_p, 2)) + ', y = ' + str(round(y_p, 2)))
+        #plt.show()
+        #self.get_logger().info('yaw = ' + str(round(yaw, 3)) + ', x = ' + str(round(x_p, 2)) + ', y = ' + str(round(y_p, 2)))
         return x, y, weight, degree, ranges
 
 def main(args=None):
