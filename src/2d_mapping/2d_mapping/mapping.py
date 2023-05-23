@@ -1,5 +1,7 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.executors import MultiThreadedExecutor
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
 from tf_transformations import euler_from_quaternion
@@ -24,9 +26,10 @@ class MapCreator(Node):
         self.pose = None # Inicializando a pose
         self.ranges = None
         
-        self.pose_subscriber = self.create_subscription(Odometry, "odom", self.Turtlebot3_pose, 40)
-        self.laser_subscriber = self.create_subscription(LaserScan, "scan", self.laser_reading, 10)
-        self.timer_ = self.create_timer(1/self.frames_sec, self.polar_to_cartesian_global)
+        self.group = ReentrantCallbackGroup()
+        self.pose_subscriber = self.create_subscription(Odometry, "odom", self.Turtlebot3_pose, 40, callback_group=self.group)
+        self.laser_subscriber = self.create_subscription(LaserScan, "scan", self.laser_reading, 10, callback_group=self.group)
+        self.timer_ = self.create_timer(1/self.frames_sec, self.polar_to_cartesian_global, callback_group=self.group)
         self.get_logger().info("Mapping Node has been started!!")
 
     def Turtlebot3_pose(self, msg): # OK
@@ -41,6 +44,7 @@ class MapCreator(Node):
 
         #self.get_logger().info(str(self.pose_timestamp))
         #self.get_logger().info(str(time.perf_counter()))
+        self.get_logger().info('Pose')
 
     def laser_reading(self, msg): # OK
         # Sentido anti-horário
@@ -48,7 +52,7 @@ class MapCreator(Node):
         self.laser_timestamp = msg.header.stamp.sec + msg.header.stamp.nanosec*10e-9
         #self.laser_timestamp = time.perf_counter()
         #self.get_logger().info(str(self.laser_timestamp))
-        #self.get_logger().info('Laser')
+        self.get_logger().info('Laser')
 
     def grid_point(self, n):
         return round(n/self.grid_resolution)*self.grid_resolution
@@ -69,7 +73,7 @@ class MapCreator(Node):
             self.get_logger().info('Não foi possível identificar a pose e/ou dados do laser do robô')
             return None, None, None, None, None
 
-        #self.get_logger().info(str(abs(self.pose_timestamp - self.laser_timestamp)))
+        self.get_logger().info(str(abs(self.pose_timestamp - self.laser_timestamp)))
 
         if abs(self.pose_timestamp - self.laser_timestamp) > 0.01:
             return None, None, None, None, None
@@ -129,20 +133,31 @@ class MapCreator(Node):
             self.dt = pd.concat([self.dt,dt2], ignore_index=True)
 
         self.dt.to_csv('Pontos_mapa.csv')
-        #plt.scatter(self.dt['x'], self.dt['y'], s=1, c = self.dt['w'])
-        #plt.scatter(x_p , y_p, color='green', s=30)
+        plt.scatter(self.dt['x'], self.dt['y'], s=1, c = self.dt['w'])
+        plt.scatter(x_p , y_p, color='green', s=30)
 
         #plt.savefig('myimage.svg', format='svg', dpi=500)
         
-        #plt.show()
+        plt.show()
         #self.get_logger().info('yaw = ' + str(round(yaw, 3)) + ', x = ' + str(round(x_p, 2)) + ', y = ' + str(round(y_p, 2)))
         return x, y, weight, degree, ranges
 
 def main(args=None):
     rclpy.init(args=args)
-    node = MapCreator()
-    rclpy.spin(node)
-    rclpy.shutdown()
+    try:
+        node = MapCreator()
+
+        executor = MultiThreadedExecutor(num_threads=3)
+        executor.add_node(node=node)
+
+        try: 
+            executor.spin()
+        finally:
+            executor.shutdown()
+            node.destroy_node()
+
+    finally:
+        rclpy.shutdown()
 
 if __name__ == "__main__":
     main()
